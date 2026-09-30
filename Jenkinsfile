@@ -26,8 +26,9 @@ pipeline {
             steps {
                 echo 'Building application...'
 
-                bat 'python --version'
-                bat 'pip install -r requirements.txt'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
@@ -35,7 +36,7 @@ pipeline {
             steps {
                 echo 'Running automated tests...'
 
-                bat 'pytest -v'
+                bat '"C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pytest -v'
             }
         }
 
